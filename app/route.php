@@ -2,20 +2,20 @@
 
 namespace App;
 
-use App\Controllers\dataController;
-use App\Controllers\indexController;
+use App\Controllers\ShowDataController;
+use App\Controllers\StoreDataController;
 
 class route
 {
     public function indexRoute()
     {
-        $controller = new indexController();
+        $controller = new StoreDataController();
         $controller->index();
     }
 
     public function dataRoute()
     {
-        $controller = new dataController();
+        $controller = new ShowDataController();
         $controller->showData();
     }
 }
