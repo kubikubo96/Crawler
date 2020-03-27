@@ -27,9 +27,9 @@ câu 4) cắt các text trong chuỗi html : <label .*?>(.*?)<\/label>
        bước 1 : chuỗi bắt đầu bằng <label
        bước 2 : muốn lấ tất cả các chữ liền nhau gồm cả dấu cách ta dùng ".*?"
        bước 3 : kết thúc chuỗi là </label>
-       bước 4 : giờ cần lấy text nằm giữa hai thẻ. đoạn text cần lấy sẽ kẹp trong><. tà dùng () và lấy bất kỳ chuỗi gì bằng ".*?"
+       bước 4 : giờ cần lấy text nằm giữa hai thẻ. tà dùng () và lấy bất kỳ chuỗi gì bằng ".*?"
 
-câu 5) Bắt 1 chuỗi bất kỳ nằm ở nhiều dòng : <h1>[\s\S]*<\/h2>
+    câu 5) Bắt 1 chuỗi bất kỳ nằm ở nhiều dòng : <h1>[\s\S]*<\/h2>
     - \s sẽ lấy được ký tự dấu cách
     - \S sẽ lấy được ký tự bất kỳ ngoại trừ dấu cách (và \S sẽ bắt được dấu xuống dòng \n)
     - Nếu kết hợp 2 ký tự đó nhét vào một khung vuông [\s\S] tức là sẽ lấy được 1 trong 2 trường hợp.
