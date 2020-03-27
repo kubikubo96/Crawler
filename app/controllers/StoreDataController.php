@@ -8,7 +8,7 @@ use App\Crawler\VietnamnetCrawler;
 use App\Crawler\DantriCrawler;
 
 
-class storeDataController
+class StoreDataController
 {
     public function index()
     {
@@ -16,7 +16,8 @@ class storeDataController
             $uri = $_POST['url'];
             $domain = substr($uri, 0, 10);
             if ($domain == "https://vn") {
-                echo "vnexpress";
+                $crawler = new VnexpressCrawler();
+                echo $crawler->getTitleVnexpress($uri)[0];
             } elseif ($domain == "https://vi") {
                 echo "vietnamnet";
             } elseif ($domain == "https://da") {
