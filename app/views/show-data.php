@@ -13,16 +13,21 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Title</td>
-            <td>Contents</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-        </tr>
+        <?php
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+                <tr>
+                    <th scope="row"><?= $row['id'] ?></th>
+                    <td><?= $row['title'] ?></td>
+                    <td><?= $row['article'] ?></td>
+                </tr>
+                <?php
+            }
+        } else {
+            echo "<br> Không có bản ghi nào trong CSDL";
+        }
+        ?>
         </tbody>
     </table>
     <a href="index.php?controller=index" class="text-info"> &larr;Return</a>
