@@ -2,6 +2,7 @@
 
 include_once "app/route.php";
 include_once "app/controllers/indexController.php";
+include_once "app/controllers/dataController.php";
 
 if (isset($_GET["controller"])) {
     $controller = $_GET["controller"];
@@ -11,15 +12,12 @@ if (isset($_GET["controller"])) {
     $controller = "index";
 }
 
-$route = new \App\route();
-$route->indexRoute();
-
-//switch ($controller){
-//    case "show-data":
-//        $route = new \Apps\route();
-//        $route->chitietRoute();
-//        break;
-//    default :
-//        $route = new \Apps\route();
-//        $route->indexRoute();
-//}
+switch ($controller) {
+    case "show-data":
+        $route = new \App\route();
+        $route->dataRoute();
+        break;
+    default :
+        $route = new \App\route();
+        $route->indexRoute();
+}

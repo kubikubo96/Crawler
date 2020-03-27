@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Controllers\dataController;
 use App\Controllers\indexController;
 
 class route
@@ -10,5 +11,11 @@ class route
     {
         $controller = new indexController();
         $controller->index();
+    }
+
+    public function dataRoute()
+    {
+        $controller = new dataController();
+        $controller->showData();
     }
 }
