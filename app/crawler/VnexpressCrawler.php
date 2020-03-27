@@ -1,7 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kubikubo
- * Date: 26/03/2020
- * Time: 17:11
- */
+
+namespace App\Crawler;
+
+class VnexpressCrawler extends Crawler
+{
+    public function getTitleVnexpress($uri)
+    {
+        return $this->getSpecificData('/<title>(.*?)<\/title>/m', $uri);
+    }
+
+    public function getArticleVnexpress($uri)
+    {
+        return $this->getSpecificData('/<article class="content_detail .*?>(.*?)<\/article>/ms', $uri);
+    }
+}
