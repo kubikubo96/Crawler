@@ -7,9 +7,9 @@
         <h1 id="title-crawler">Crawlers</h1>
         <div class="form-group">
             <label for="inputUrl">Nhập địa chỉ bạn muốn crawl data</label>
-            <input type="text" class="form-control" id="inputUrl" placeholder="Enter url">
+            <input type="text" class="form-control" id="inputUrl" name="url" placeholder="Enter url">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
     </form>
     <a href="index.php?controller=show-data" class="text-info">Display the data you have collected</a>
 </div>
