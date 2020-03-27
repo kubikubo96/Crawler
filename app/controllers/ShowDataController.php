@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Data;
 
-class showDataController
+class ShowDataController
 {
     public function showData()
     {
