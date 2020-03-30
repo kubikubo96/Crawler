@@ -10,6 +10,15 @@ use App\Crawler\DantriCrawler;
 
 class StoreDataController
 {
+    public function checkStatus($status)
+    {
+        if ($status) {
+            echo "Lưu thành công !";
+        } else {
+            echo "Lưu thất bại !";
+        }
+    }
+
     public function index()
     {
         if (isset($_POST) && !empty($_POST)) {
@@ -22,33 +31,21 @@ class StoreDataController
                 $article = $crawler->getArticleVnexpress($uri)[0];
                 $date = $crawler->getDateVnexpress($uri)[0];
                 $status = $model->store($title, $article, $date);
-                if ($status) {
-                    echo "Lưu thành công!";
-                } else {
-                    echo "Lưu thất bại!";
-                }
+                $this->checkStatus($status);
             } elseif ($domain == "https://da") {
                 $crawler = new DantriCrawler();
                 $title = $crawler->getTitleDanTri($uri)[0];
                 $article = $crawler->getArticleDanTri($uri)[0];
                 $date = $crawler->getDateDanTri($uri)[0];
                 $status = $model->store($title, $article, $date);
-                if ($status) {
-                    echo "Lưu thành công!";
-                } else {
-                    echo "Lưu thất bại!";
-                }
+                $this->checkStatus($status);
             } elseif ($domain == "https://vi") {
                 $crawler = new VietnamnetCrawler();
                 $title = $crawler->getTitleVietNamNet($uri)[0];
                 $article = $crawler->getArticleVietNamNet($uri)[0];
                 $date = $crawler->getDateVietNamNet($uri)[0];
                 $status = $model->store($title, $article, $date);
-                if ($status) {
-                    echo "Lưu thành công!";
-                } else {
-                    echo "Lưu thất bại!";
-                }
+                $this->checkStatus($status);
             }
         }
         include_once "app/views/index.php";
