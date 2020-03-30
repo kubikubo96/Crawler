@@ -11,6 +11,6 @@ Class VietnamnetCrawler extends Crawler
 
     public function getArticleVietNamNet($uri)
     {
-        return $this->getSpecificData('/<div id="ArticleContent"(.*?)<div class="m-t-10 ArticleDateTime clearfix">/ms', $uri);
+        return $this->getSpecificData('/<div id="ArticleContent" class="ArticleContent">(.*?)><div id="BoxTag"/m   ', $uri);
     }
 }
