@@ -13,9 +13,9 @@ class StoreDataController
     public function checkStatus($status)
     {
         if ($status) {
-            echo "Lưu thành công !";
+            echo "<h4>Crawl thành công !</h4>";
         } else {
-            echo "Lưu thất bại !";
+            echo "<h4>Lưu thất bại !</h4>";
         }
     }
 
@@ -46,6 +46,8 @@ class StoreDataController
                 $date = $crawler->getDateVietNamNet($uri)[0];
                 $status = $model->store($title, $article, $date);
                 $this->checkStatus($status);
+            } else {
+                echo " - Chỉ lấy dữ liệu từ bài viết chi tiết của dantri, vietnamnet, vnexpress<br> - Url Không để trống";
             }
         }
         include_once "app/views/index.php";
