@@ -4,7 +4,7 @@
 <body>
 <div class="container">
     <div>
-        <h1 id="title-data">Dữ liệu đã thu thập được</h1>
+        <h1 id="title-data">Data has been collected</h1>
         <table class="table" id="table-crawler">
             <thead>
             <tr>
