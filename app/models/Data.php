@@ -13,12 +13,12 @@ class Data extends database
         return $result;
     }
 
-    public function store($title, $article)
+    public function store($title, $article, $date)
     {
-        if (empty($title) || empty($article)) {
+        if (empty($title) || empty($article) || empty($date)) {
             return false;
         }
-        $sqlInsert = "INSERT INTO data_collected (title, article, date) VALUES ('$title','$article','1/1/1')";
+        $sqlInsert = "INSERT INTO data_collected (title, article, date) VALUES ('$title','$article','$date')";
 
         if (mysqli_query($this->connection, $sqlInsert)) {
             return true;

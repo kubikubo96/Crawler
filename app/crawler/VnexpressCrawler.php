@@ -13,4 +13,9 @@ class VnexpressCrawler extends Crawler
     {
         return $this->getSpecificData('/<article class="content_detail .*?>(.*?)<\/article>/ms', $uri);
     }
+
+    public function getDateVnexpress($uri)
+    {
+        return $this->getSpecificData('/<span class="time.*?>(.*?)<\/span>/m', $uri);
+    }
 }
