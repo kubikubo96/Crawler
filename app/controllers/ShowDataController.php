@@ -9,7 +9,7 @@ class ShowDataController
     public function showData()
     {
         $model = new Data();
-        $result = $model->getAllData();
+        $model->getAllData();
 
         include_once "app/views/show-data.php";
     }
