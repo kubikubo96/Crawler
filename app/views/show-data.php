@@ -3,12 +3,13 @@
 <?php include_once "app/views/head.php" ?>
 <body>
 <div class="container">
-    <h1 id="title-data">Dữ liệu đã thu thập được</h1>
-    <div class="table-responsive">
-        <table class="table">
+    <div>
+        <h1 id="title-data">Dữ liệu đã thu thập được</h1>
+        <table class="table" id="table-crawler">
             <thead>
             <tr>
                 <th scope="col">#</th>
+                <th scope="col">Date</th>
                 <th scope="col">Title</th>
                 <th scope="col">Contents</th>
             </tr>
@@ -21,12 +22,17 @@
                     <tr>
                         <th scope="row"><?= $row['id'] ?></th>
                         <td>
-                            <div class="content-title">
+                            <div class="content-date-crawler">
+                                <?= $row['date'] ?>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="content-title-crawler">
                                 <?= $row['title'] ?>
                             </div>
                         </td>
                         <td>
-                            <div class="content-article">
+                            <div class="content-article-crawler">
                                 <?= $row['article'] ?>
                             </div>
                         </td>
@@ -38,9 +44,9 @@
             }
             ?>
             </tbody>
-        </table>
     </div>
     <a href="index.php?controller=index" class="text-info"> &larr;Return</a>
+</div>
 </div>
 </body>
 </html>
