@@ -15,13 +15,25 @@ class StoreDataController
         if (isset($_POST) && !empty($_POST)) {
             $uri = $_POST['url'];
             $domain = substr($uri, 0, 10);
+            $model = new Data();
             if ($domain == "https://vn") {
                 $crawler = new VnexpressCrawler();
-                echo $crawler->getTitleVnexpress($uri)[0];
-            } elseif ($domain == "https://vi") {
-                echo "vietnamnet";
+                $title = $crawler->getTitleVnexpress($uri)[0];
+                $article = $crawler->getArticleVnexpress($uri)[0];
+                $status = $model->store($title, $article);
+                if ($status) {
+                    echo "Lưu thành công!";
+                } else {
+                    echo "Lưu thất bại!";
+                }
             } elseif ($domain == "https://da") {
-                echo "dantri";
+                $crawler = new DantriCrawler();
+                echo $crawler->getTitleDanTri($uri)[0];
+                echo $crawler->getArticleDanTri($uri)[0];
+            } elseif ($domain == "https://vi") {
+                $crawler = new VietnamnetCrawler();
+                echo $crawler->getTitleVietNamNet($uri)[0];
+                echo $crawler->getArticleVietNamNet($uri)[0];
             }
         }
         include_once "app/views/index.php";
