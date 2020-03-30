@@ -6,7 +6,7 @@ class VnexpressCrawler extends Crawler
 {
     public function getTitleVnexpress($uri)
     {
-        return $this->getSpecificData('/<title>(.*?)<\/title>/m', $uri);
+        return $this->getSpecificData('/<h1 class="title_news_detail.*?">(.*?)<\/h1>/ms', $uri);
     }
 
     public function getArticleVnexpress($uri)
