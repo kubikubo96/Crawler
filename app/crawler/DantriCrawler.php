@@ -13,4 +13,9 @@ class DantriCrawler extends Crawler
     {
         return $this->getSpecificData('/<div id="divNewsContent".*?>(.*?)<style>/ms', $uri);
     }
+
+    public function getDateDanTri($uri)
+    {
+        return $this->getSpecificData('/<span class="fr fon7 mr2 tt-capitalize">(.*?)<\/span>/ms', $uri);
+    }
 }

@@ -13,4 +13,9 @@ Class VietnamnetCrawler extends Crawler
     {
         return $this->getSpecificData('/<div id="ArticleContent" class="ArticleContent">(.*?)><div id="BoxTag"/m   ', $uri);
     }
+
+    public function getDateVietNamNet($uri)
+    {
+        return $this->getSpecificData('/<span class="ArticleDate  right">(.*?)<\/span>/ms', $uri);
+    }
 }
