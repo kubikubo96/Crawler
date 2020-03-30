@@ -20,7 +20,8 @@ class StoreDataController
                 $crawler = new VnexpressCrawler();
                 $title = $crawler->getTitleVnexpress($uri)[0];
                 $article = $crawler->getArticleVnexpress($uri)[0];
-                $status = $model->store($title, $article);
+                $date = $crawler->getDateVnexpress($uri)[0];
+                $status = $model->store($title, $article, $date);
                 if ($status) {
                     echo "Lưu thành công!";
                 } else {
@@ -28,12 +29,26 @@ class StoreDataController
                 }
             } elseif ($domain == "https://da") {
                 $crawler = new DantriCrawler();
-                echo $crawler->getTitleDanTri($uri)[0];
-                echo $crawler->getArticleDanTri($uri)[0];
+                $title = $crawler->getTitleDanTri($uri)[0];
+                $article = $crawler->getArticleDanTri($uri)[0];
+                $date = $crawler->getDateDanTri($uri)[0];
+                $status = $model->store($title, $article, $date);
+                if ($status) {
+                    echo "Lưu thành công!";
+                } else {
+                    echo "Lưu thất bại!";
+                }
             } elseif ($domain == "https://vi") {
                 $crawler = new VietnamnetCrawler();
-                echo $crawler->getTitleVietNamNet($uri)[0];
-                echo $crawler->getArticleVietNamNet($uri)[0];
+                $title = $crawler->getTitleVietNamNet($uri)[0];
+                $article = $crawler->getArticleVietNamNet($uri)[0];
+                $date = $crawler->getDateVietNamNet($uri)[0];
+                $status = $model->store($title, $article, $date);
+                if ($status) {
+                    echo "Lưu thành công!";
+                } else {
+                    echo "Lưu thất bại!";
+                }
             }
         }
         include_once "app/views/index.php";
