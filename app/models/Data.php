@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Data extends database
+class Data extends Database
 {
     public function getAllData()
     {

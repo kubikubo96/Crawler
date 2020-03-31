@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class database
+class Database
 {
     public $connection;
 
