@@ -13,9 +13,9 @@ class StoreDataController
     public function checkStatus($status)
     {
         if ($status) {
-            echo "<h4>Crawl thành công !</h4>";
+            echo "<h4>Data crawled successfully!</h4>";
         } else {
-            echo "<h4>Lưu thất bại !</h4>";
+            echo "<h4>The URL is not valid!</h4>";
         }
     }
 
@@ -47,7 +47,7 @@ class StoreDataController
                 $status = $model->store($title, $article, $date);
                 $this->checkStatus($status);
             } else {
-                echo " - Chỉ lấy dữ liệu từ bài viết chi tiết của dantri, vietnamnet, vnexpress<br> - Url Không để trống";
+                echo "Retrieve only data from article details of dantri, vnexpress, vietnamnet<br>URL cannot be empty";
             }
         }
         include_once "app/views/index.php";
