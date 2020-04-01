@@ -29,23 +29,24 @@ class StoreDataController
                 echo "<h4>The URL is not valid!</h4>";
             } elseif ($domain == "https://vn") {
                 $crawler = new VnexpressCrawler();
-                $title = $crawler->getTitleVnexpress($uri)[0];
-                $article = $crawler->getArticleVnexpress($uri)[0];
-                $datetime = $crawler->getDateVnexpress($uri)[0];
+                $title = $crawler->getTitle('/<h1 class="title_news_detail.*?">(.*?)<\/h1>/ms', $uri)[0];
+                $article = $crawler->getArticle('/<article class="content_detail .*?>(.*?)<\/article>/ms', $uri)[0];
+                $datetime = $crawler->getDate('/<span class="time.*?>(.*?)<\/span>/m', $uri)[0];
+                echo $title,$datetime,$article;
                 $status = $model->store($title, $article, $datetime);
                 $this->checkStatus($status);
             } elseif ($domain == "https://da") {
                 $crawler = new DantriCrawler();
-                $title = $crawler->getTitleDanTri($uri)[0];
-                $article = $crawler->getArticleDanTri($uri)[0];
-                $datetime = $crawler->getDateDanTri($uri)[0];
+                $title = $crawler->getTitle('/<h1 class="fon31 mgb15">(.*?)<\/h1>/ms', $uri)[0];
+                $article = $crawler->getArticle('/<div id="divNewsContent".*?>(.*?)<style>/ms', $uri)[0];
+                $datetime = $crawler->getDate('/<span class="fr fon7 mr2 tt-capitalize">(.*?)<\/span>/ms', $uri)[0];
                 $status = $model->store($title, $article, $datetime);
                 $this->checkStatus($status);
             } elseif ($domain == "https://vi") {
                 $crawler = new VietnamnetCrawler();
-                $title = $crawler->getTitleVietNamNet($uri)[0];
-                $article = $crawler->getArticleVietNamNet($uri)[0];
-                $datetime = $crawler->getDateVietNamNet($uri)[0];
+                $title = $crawler->getTitle('/<h1 class="title.*?>(.*?)<\/h1>/m', $uri)[0];
+                $article = $crawler->getArticle('/<div id="ArticleContent" class="ArticleContent">(.*?)><div class="VnnAdsPos clearfix" data-pos="vt_article_bottom">/m', $uri)[0];
+                $datetime = $crawler->getDate('/<span class="ArticleDate  right">(.*?)<\/span>/ms', $uri)[0];
                 $status = $model->store($title, $article, $datetime);
                 $this->checkStatus($status);
             } else {
