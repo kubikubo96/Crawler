@@ -4,7 +4,7 @@ namespace App\Curl;
 
 Class Curl
 {
-    public function getWebContents($uri)
+    public function getWebContent($uri)
     {
         // Initialize CURL
         $curl = curl_init($uri);
