@@ -22,6 +22,7 @@ class Data extends Config
         }
         $title = addslashes($title);
         $article = addslashes($article);
+        $datetime = addslashes($datetime);
         $sqlInsert = "INSERT INTO data_collected (title, article, datetime) VALUES ('$title','$article','$datetime')";
 
         if (mysqli_query($this->connection, $sqlInsert)) {
