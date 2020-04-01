@@ -4,18 +4,18 @@ namespace App\Crawler;
 
 class DantriCrawler extends Crawler
 {
-    public function getTitleDanTri($uri)
+    public function getTitle($regex, $uri)
     {
-        return $this->getSpecificData('/<h1 class="fon31 mgb15">(.*?)<\/h1>/ms', $uri);
+        return parent::getTitle($regex, $uri);
     }
 
-    public function getArticleDanTri($uri)
+    public function getArticle($regex, $uri)
     {
-        return $this->getSpecificData('/<div id="divNewsContent".*?>(.*?)<style>/ms', $uri);
+        return parent::getArticle($regex, $uri);
     }
 
-    public function getDateDanTri($uri)
+    public function getDate($regex, $uri)
     {
-        return $this->getSpecificData('/<span class="fr fon7 mr2 tt-capitalize">(.*?)<\/span>/ms', $uri);
+        return parent::getDate($regex, $uri);
     }
 }
