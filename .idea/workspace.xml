@@ -4,6 +4,8 @@
     <list default="true" id="9508aa8f-6826-46a7-b39f-12fa99ff348e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/StoreDataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/StoreDataController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/crawler/Crawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/Crawler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Data.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Data.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +22,9 @@
   </component>
   <component name="PhpDebugGeneral" zd_debug_auto_detect_ide_hosts="false" zd_debug_can_accept_external_connections="false" zd_debug_configured_ide_host="192.168.31.150,127.0.1.1,127.0.0.1" zd_debug_ignore_z_ray_system_requests="false" />
   <component name="ProjectId" id="1ZsHyEaE0JH7UewPIqwcT9EgSxm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -70,7 +75,9 @@
       <workItem from="1585305226943" duration="445000" />
       <workItem from="1585621764025" duration="1760000" />
       <workItem from="1585625412886" duration="5380000" />
-      <workItem from="1585645097514" duration="1868000" />
+      <workItem from="1585645097514" duration="3269000" />
+      <workItem from="1585705698868" duration="355000" />
+      <workItem from="1585706071003" duration="5403000" />
     </task>
     <servers />
   </component>
@@ -90,6 +97,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="634" y="234" width="642" height="637" key="#StoreDataController.php/0.27.1920.1053@0.27.1920.1053" timestamp="1585626360577" />
+    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1585706051981">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1585706051981" />
     <state width="1874" height="344" key="GridCell.Tab.0.bottom" timestamp="1585643191762">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -138,6 +149,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="344" key="GridCell.Tab.2.right/0.27.1920.1053@0.27.1920.1053" timestamp="1585643191763" />
+    <state x="755" y="478" width="399" height="149" key="NewPhpFileDialog" timestamp="1585706922910">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="755" y="478" width="399" height="149" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1585706922910" />
     <state x="449" y="187" key="SettingsEditor" timestamp="1585625928983">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -146,5 +161,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="616" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1585621171919" />
+    <state x="605" y="161" width="868" height="783" key="find.popup" timestamp="1585710720041">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="605" y="161" width="868" height="783" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1585710720041" />
   </component>
 </project>
