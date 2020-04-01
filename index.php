@@ -1,7 +1,7 @@
 <?php
 
-include_once "app/route.php";
-include_once "app/models/Database.php";
+include_once "Config.php";
+include_once "app/Route.php";
 include_once "app/controllers/StoreDataController.php";
 include_once "app/controllers/ShowDataController.php";
 include_once "app/models/Data.php";
@@ -20,10 +20,10 @@ if (isset($_GET["controller"])) {
 
 switch ($controller) {
     case "show-data":
-        $route = new \App\route();
+        $route = new \App\Route();
         $route->dataRoute();
         break;
     default :
-        $route = new \App\route();
+        $route = new \App\Route();
         $route->indexRoute();
 }
