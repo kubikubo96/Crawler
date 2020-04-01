@@ -15,7 +15,7 @@ class StoreDataController
         if ($status) {
             echo "<h4>Data crawled successfully!</h4>";
         } else {
-            echo "<h4>Data saving failed!</h4>";
+            echo "<h4>The URL is not valid!</h4>";
         }
     }
 
@@ -23,25 +23,23 @@ class StoreDataController
     {
         if (isset($_POST) && !empty($_POST)) {
             $uri = $_POST['url'];
-            $domain = substr($uri, 0, 10);
+            $domain = substr($uri, 0, 22);
             $model = new Data();
-            if ($uri == 'https://vietnamnet.vn/' || $uri == 'https://vnexpress.net/' || $uri == 'https://vnexpress.net/') {
-                echo "<h4>The URL is not valid!</h4>";
-            } elseif ($domain == "https://vn") {
+            if ($domain == "https://vnexpress.net/") {
                 $crawler = new VnexpressCrawler();
                 $title = $crawler->getContent('/<h1 class="title_news_detail.*?">(.*?)<\/h1>/ms', $uri)[0];
                 $article = $crawler->getContent('/<article class="content_detail .*?>(.*?)<\/article>/ms', $uri)[0];
                 $datetime = $crawler->getContent('/<span class="time.*?>(.*?)<\/span>/m', $uri)[0];
                 $status = $model->store($title, $article, $datetime);
                 $this->checkStatus($status);
-            } elseif ($domain == "https://da") {
+            } elseif ($domain == "https://dantri.com.vn/") {
                 $crawler = new DantriCrawler();
                 $title = $crawler->getContent('/<h1 class="fon31 mgb15">(.*?)<\/h1>/ms', $uri)[0];
                 $article = $crawler->getContent('/<div id="divNewsContent".*?>(.*?)<style>/ms', $uri)[0];
                 $datetime = $crawler->getContent('/<span class="fr fon7 mr2 tt-capitalize">(.*?)<\/span>/ms', $uri)[0];
                 $status = $model->store($title, $article, $datetime);
                 $this->checkStatus($status);
-            } elseif ($domain == "https://vi") {
+            } elseif ($domain == "https://vietnamnet.vn/") {
                 $crawler = new VietnamnetCrawler();
                 $title = $crawler->getContent('/<h1 class="title.*?>(.*?)<\/h1>/m', $uri)[0];
                 $article = $crawler->getContent('/<div id="ArticleContent" class="ArticleContent">(.*?)><div class="VnnAdsPos clearfix" data-pos="vt_article_bottom">/m', $uri)[0];
