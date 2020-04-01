@@ -4,18 +4,18 @@ namespace App\Crawler;
 
 Class VietnamnetCrawler extends Crawler
 {
-    public function getTitleVietNamNet($uri)
+    public function getTitle($regex, $uri)
     {
-        return $this->getSpecificData('/<h1 class="title.*?>(.*?)<\/h1>/m', $uri);
+        return parent::getTitle($regex, $uri);
     }
 
-    public function getArticleVietNamNet($uri)
+    public function getArticle($regex, $uri)
     {
-        return $this->getSpecificData('/<div id="ArticleContent" class="ArticleContent">(.*?)><div class="VnnAdsPos clearfix" data-pos="vt_article_bottom">/m', $uri);
+        return parent::getArticle($regex, $uri);
     }
 
-    public function getDateVietNamNet($uri)
+    public function getDate($regex, $uri)
     {
-        return $this->getSpecificData('/<span class="ArticleDate  right">(.*?)<\/span>/ms', $uri);
+        return parent::getDate($regex, $uri);
     }
 }

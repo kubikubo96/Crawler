@@ -4,18 +4,18 @@ namespace App\Crawler;
 
 class VnexpressCrawler extends Crawler
 {
-    public function getTitleVnexpress($uri)
+    public function getTitle($regex, $uri)
     {
-        return $this->getSpecificData('/<h1 class="title_news_detail.*?">(.*?)<\/h1>/ms', $uri);
+        return parent::getTitle($regex, $uri);
     }
 
-    public function getArticleVnexpress($uri)
+    public function getArticle($regex, $uri)
     {
-        return $this->getSpecificData('/<article class="content_detail .*?>(.*?)<\/article>/ms', $uri);
+        return parent::getArticle($regex, $uri);
     }
 
-    public function getDateVnexpress($uri)
+    public function getDate($regex, $uri)
     {
-        return $this->getSpecificData('/<span class="time.*?>(.*?)<\/span>/m', $uri);
+        return parent::getDate($regex, $uri);
     }
 }
