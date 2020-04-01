@@ -15,7 +15,7 @@ class StoreDataController
         if ($status) {
             echo "<h4>Data crawled successfully!</h4>";
         } else {
-            echo "<h4>The URL is not valid!</h4>";
+            echo "<h4>Data saving failed!</h4>";
         }
     }
 
@@ -25,26 +25,28 @@ class StoreDataController
             $uri = $_POST['url'];
             $domain = substr($uri, 0, 10);
             $model = new Data();
-            if ($domain == "https://vn") {
+            if ($uri == 'https://vietnamnet.vn/' || $uri == 'https://vnexpress.net/' || $uri == 'https://vnexpress.net/') {
+                echo "<h4>The URL is not valid!</h4>";
+            } elseif ($domain == "https://vn") {
                 $crawler = new VnexpressCrawler();
                 $title = $crawler->getTitleVnexpress($uri)[0];
                 $article = $crawler->getArticleVnexpress($uri)[0];
-                $date = $crawler->getDateVnexpress($uri)[0];
-                $status = $model->store($title, $article, $date);
+                $datetime = $crawler->getDateVnexpress($uri)[0];
+                $status = $model->store($title, $article, $datetime);
                 $this->checkStatus($status);
             } elseif ($domain == "https://da") {
                 $crawler = new DantriCrawler();
                 $title = $crawler->getTitleDanTri($uri)[0];
                 $article = $crawler->getArticleDanTri($uri)[0];
-                $date = $crawler->getDateDanTri($uri)[0];
-                $status = $model->store($title, $article, $date);
+                $datetime = $crawler->getDateDanTri($uri)[0];
+                $status = $model->store($title, $article, $datetime);
                 $this->checkStatus($status);
             } elseif ($domain == "https://vi") {
                 $crawler = new VietnamnetCrawler();
                 $title = $crawler->getTitleVietNamNet($uri)[0];
                 $article = $crawler->getArticleVietNamNet($uri)[0];
-                $date = $crawler->getDateVietNamNet($uri)[0];
-                $status = $model->store($title, $article, $date);
+                $datetime = $crawler->getDateVietNamNet($uri)[0];
+                $status = $model->store($title, $article, $datetime);
                 $this->checkStatus($status);
             } else {
                 echo "Retrieve only data from article details of dantri, vnexpress, vietnamnet<br>URL cannot be empty";
