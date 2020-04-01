@@ -2,7 +2,7 @@
 
 namespace App\Crawler;
 
-class Crawler
+class Crawler implements CrawlerInterface
 {
     public function getWebContent($uri)
     {
