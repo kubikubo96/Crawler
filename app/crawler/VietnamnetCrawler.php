@@ -4,18 +4,8 @@ namespace App\Crawler;
 
 Class VietnamnetCrawler extends Crawler
 {
-    public function getTitle($regex, $uri)
+    public function getContent($regex, $uri)
     {
-        return parent::getTitle($regex, $uri);
-    }
-
-    public function getArticle($regex, $uri)
-    {
-        return parent::getArticle($regex, $uri);
-    }
-
-    public function getDate($regex, $uri)
-    {
-        return parent::getDate($regex, $uri);
+        return $this->getSpecificData($regex, $uri);
     }
 }
