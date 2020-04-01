@@ -6,6 +6,7 @@ include_once "app/controllers/StoreDataController.php";
 include_once "app/controllers/ShowDataController.php";
 include_once "app/models/Data.php";
 include_once "app/crawler/Crawler.php";
+include_once "app/crawler/CrawlerInterface.php";
 include_once "app/crawler/DantriCrawler.php";
 include_once "app/crawler/VietnamnetCrawler.php";
 include_once "app/crawler/VnexpressCrawler.php";
