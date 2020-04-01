@@ -32,7 +32,6 @@ class StoreDataController
                 $title = $crawler->getTitle('/<h1 class="title_news_detail.*?">(.*?)<\/h1>/ms', $uri)[0];
                 $article = $crawler->getArticle('/<article class="content_detail .*?>(.*?)<\/article>/ms', $uri)[0];
                 $datetime = $crawler->getDate('/<span class="time.*?>(.*?)<\/span>/m', $uri)[0];
-                echo $title,$datetime,$article;
                 $status = $model->store($title, $article, $datetime);
                 $this->checkStatus($status);
             } elseif ($domain == "https://da") {

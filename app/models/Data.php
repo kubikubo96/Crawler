@@ -20,7 +20,7 @@ class Data extends Config
         if (empty($title) || empty($article) || empty($datetime)) {
             return false;
         }
-        $sqlInsert = "INSERT INTO data_collected (title, article, datetime) VALUES ('$title','$article','$datetime')";
+        $sqlInsert = "INSERT INTO data_collected (title, article, datetime) VALUES (\"  $title  \",'$article','$datetime')";
 
         if (mysqli_query($this->connection, $sqlInsert)) {
             return true;

@@ -23,7 +23,7 @@
                         <th scope="row"><?= $row['id'] ?></th>
                         <td>
                             <div class="content-date-crawler">
-                                <?= $row['date'] ?>
+                                <?= $row['datetime'] ?>
                             </div>
                         </td>
                         <td>
