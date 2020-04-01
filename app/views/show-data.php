@@ -9,7 +9,7 @@
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Date</th>
+                <th scope="col">DateTime</th>
                 <th scope="col">Title</th>
                 <th scope="col">Contents</th>
             </tr>
