@@ -3,11 +3,7 @@
     overflow-x: scroll;
 }
 
-.content-title-crawler {
-    width: 200px;
-}
-
-#table-crawler {
+#table-crawler{
     width: auto;
     height: auto;
 }
