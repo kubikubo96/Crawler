@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9508aa8f-6826-46a7-b39f-12fa99ff348e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/StoreDataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/StoreDataController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/crawler/Crawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/Crawler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +76,8 @@
       <workItem from="1585625412886" duration="5380000" />
       <workItem from="1585645097514" duration="3269000" />
       <workItem from="1585705698868" duration="355000" />
-      <workItem from="1585706071003" duration="26322000" />
+      <workItem from="1585706071003" duration="26633000" />
+      <workItem from="1585745141473" duration="753000" />
     </task>
     <servers />
   </component>
@@ -151,11 +153,12 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="344" key="GridCell.Tab.2.right/0.27.1920.1053@0.27.1920.1053" timestamp="1585643191763" />
-    <state x="1122" y="478" width="399" height="149" key="NewPhpFileDialog" timestamp="1585725509053">
-      <screen x="0" y="27" width="3840" height="1053" />
+    <state x="743" y="469" width="249" height="149" key="NewPhpFileDialog" timestamp="1585745312175">
+      <screen x="41" y="27" width="1879" height="1053" />
     </state>
     <state x="755" y="478" width="399" height="149" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1585712555663" />
     <state x="1122" y="478" key="NewPhpFileDialog/0.27.3840.1053@0.27.3840.1053" timestamp="1585725509053" />
+    <state x="743" y="469" width="249" height="149" key="NewPhpFileDialog/41.27.1879.1053@41.27.1879.1053" timestamp="1585745312175" />
     <state x="449" y="187" key="SettingsEditor" timestamp="1585625928983">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -172,9 +175,10 @@
       <screen x="0" y="27" width="3840" height="1053" />
     </state>
     <state x="624" y="253" key="run.anything.popup/0.27.3840.1053@0.27.3840.1053" timestamp="1585727791880" />
-    <state x="623" y="237" width="670" height="58" key="search.everywhere.popup" timestamp="1585713777876">
-      <screen x="0" y="27" width="3840" height="1053" />
+    <state x="346" y="237" width="672" height="160" key="search.everywhere.popup" timestamp="1585745756170">
+      <screen x="41" y="27" width="1879" height="1053" />
     </state>
     <state x="623" y="237" width="670" height="58" key="search.everywhere.popup/0.27.3840.1053@0.27.3840.1053" timestamp="1585713777876" />
+    <state x="346" y="237" width="672" height="160" key="search.everywhere.popup/41.27.1879.1053@41.27.1879.1053" timestamp="1585745756170" />
   </component>
 </project>

@@ -2,20 +2,13 @@
 
 namespace App\Crawler;
 
-class Crawler implements CrawlerInterface
+use App\Curl\Curl;
+
+class Crawler extends Curl implements CrawlerInterface
 {
     public function getWebContent($uri)
     {
-        // Initialize CURL
-        $curl = curl_init($uri);
-        // Set return
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-
-        $result = curl_exec($curl);
-        // Disconnect CURL, free
-        curl_close($curl);
-
-        return $result;
+        return $this->getWebContents($uri);
     }
 
     public function getSpecificData($regex, $uri)
