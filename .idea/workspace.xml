@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9508aa8f-6826-46a7-b39f-12fa99ff348e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/crawler/CrawlerInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/CrawlerInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +75,7 @@
       <workItem from="1585625412886" duration="5380000" />
       <workItem from="1585645097514" duration="3269000" />
       <workItem from="1585705698868" duration="355000" />
-      <workItem from="1585706071003" duration="20054000" />
+      <workItem from="1585706071003" duration="20684000" />
     </task>
     <servers />
   </component>
@@ -169,6 +168,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="605" y="161" width="868" height="783" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1585713167263" />
+    <state x="624" y="253" key="run.anything.popup" timestamp="1585727791880">
+      <screen x="0" y="27" width="3840" height="1053" />
+    </state>
+    <state x="624" y="253" key="run.anything.popup/0.27.3840.1053@0.27.3840.1053" timestamp="1585727791880" />
     <state x="623" y="237" width="670" height="58" key="search.everywhere.popup" timestamp="1585713777876">
       <screen x="0" y="27" width="3840" height="1053" />
     </state>
