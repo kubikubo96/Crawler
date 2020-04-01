@@ -6,13 +6,14 @@ class Crawler
 {
     public function getWebContent($uri)
     {
-        $ch = curl_init($uri);
+        // Initialize CURL
+        $curl = curl_init($uri);
+        // Set return
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-        $result = curl_exec($ch);
-
-        curl_close($ch);
+        $result = curl_exec($curl);
+        // Disconnect CURL, free
+        curl_close($curl);
 
         return $result;
     }
