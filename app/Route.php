@@ -5,7 +5,7 @@ namespace App;
 use App\Controllers\ShowDataController;
 use App\Controllers\StoreDataController;
 
-class route
+class Route
 {
     public function indexRoute()
     {
