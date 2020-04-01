@@ -2,7 +2,7 @@
 
 namespace App\Crawler;
 
-Interface CrawlerInterface
+interface CrawlerInterface
 {
     public function getTitle($regex, $uri);
 
