@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Data
+class Model
 {
     public $host = "localhost";
     public $user = "root";

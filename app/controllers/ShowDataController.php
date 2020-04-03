@@ -2,13 +2,13 @@
 
 namespace App\Controllers;
 
-use App\Models\Data;
+use App\Models\Model;
 
 class ShowDataController
 {
     public function showData()
     {
-        $model = new Data();
+        $model = new Model();
         $result = $model->getAllData();
 
         include_once "app/views/show-data.php";
