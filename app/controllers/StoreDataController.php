@@ -26,24 +26,24 @@ class StoreDataController
             $domain = substr($uri, 0, 22);
             $model = new Model();
             if ($domain == "https://vnexpress.net/") {
-                $crawler = new VnexpressCrawler();
-                $title = $crawler->getContent('/<h1 class="title_news_detail.*?">(.*?)<\/h1>/ms', $uri)[0];
-                $article = $crawler->getContent('/<article class="content_detail .*?>(.*?)<\/article>/ms', $uri)[0];
-                $datetime = $crawler->getContent('/<span class="time.*?>(.*?)<\/span>/m', $uri)[0];
+                $crawler = new VnexpressCrawler($uri);
+                $title = $crawler->getTitle()[0];
+                $article = $crawler->getArticle()[0];
+                $datetime = $crawler->getDate()[0];
                 $status = $model->store($title, $article, $datetime);
                 $this->checkStatus($status);
             } elseif ($domain == "https://dantri.com.vn/") {
-                $crawler = new DantriCrawler();
-                $title = $crawler->getContent('/<h1 class="fon31 mgb15">(.*?)<\/h1>/ms', $uri)[0];
-                $article = $crawler->getContent('/<div id="divNewsContent".*?>(.*?)<style>/ms', $uri)[0];
-                $datetime = $crawler->getContent('/<span class="fr fon7 mr2 tt-capitalize">(.*?)<\/span>/ms', $uri)[0];
+                $crawler = new DantriCrawler($uri);
+                $title = $crawler->getTitle()[0];
+                $article = $crawler->getArticle()[0];
+                $datetime = $crawler->getDate()[0];
                 $status = $model->store($title, $article, $datetime);
                 $this->checkStatus($status);
             } elseif ($domain == "https://vietnamnet.vn/") {
-                $crawler = new VietnamnetCrawler();
-                $title = $crawler->getContent('/<h1 class="title.*?>(.*?)<\/h1>/m', $uri)[0];
-                $article = $crawler->getContent('/<div id="ArticleContent" class="ArticleContent">(.*?)><div class="VnnAdsPos clearfix" data-pos="vt_article_bottom">/m', $uri)[0];
-                $datetime = $crawler->getContent('/<span class="ArticleDate  right">(.*?)<\/span>/ms', $uri)[0];
+                $crawler = new VietnamnetCrawler($uri);
+                $title = $crawler->getTitle()[0];
+                $article = $crawler->getArticle()[0];
+                $datetime = $crawler->getDate()[0];
                 $status = $model->store($title, $article, $datetime);
                 $this->checkStatus($status);
             } else {

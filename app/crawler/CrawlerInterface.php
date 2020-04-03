@@ -4,5 +4,5 @@ namespace App\Crawler;
 
 interface CrawlerInterface
 {
-    public function getSpecificData($regex, $uri);
+    public function getSpecificData($regex);
 }
