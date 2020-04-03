@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\Data;
+use App\Models\Model;
 use App\Crawler\VnexpressCrawler;
 use App\Crawler\VietnamnetCrawler;
 use App\Crawler\DantriCrawler;
@@ -24,7 +24,7 @@ class StoreDataController
         if (isset($_POST) && !empty($_POST)) {
             $uri = $_POST['url'];
             $domain = substr($uri, 0, 22);
-            $model = new Data();
+            $model = new Model();
             if ($domain == "https://vnexpress.net/") {
                 $crawler = new VnexpressCrawler();
                 $title = $crawler->getContent('/<h1 class="title_news_detail.*?">(.*?)<\/h1>/ms', $uri)[0];
