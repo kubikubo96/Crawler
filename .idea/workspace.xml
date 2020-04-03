@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9508aa8f-6826-46a7-b39f-12fa99ff348e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/StoreDataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/StoreDataController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/crawler/Crawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/Crawler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/crawler/CrawlerInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/CrawlerInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/crawler/DantriCrawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/DantriCrawler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/crawler/VietnamnetCrawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/VietnamnetCrawler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/crawler/VnexpressCrawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/VnexpressCrawler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/curl/curl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/curl/Curl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +80,7 @@
       <workItem from="1585645097514" duration="3269000" />
       <workItem from="1585705698868" duration="355000" />
       <workItem from="1585706071003" duration="26633000" />
-      <workItem from="1585745141473" duration="30968000" />
+      <workItem from="1585745141473" duration="32759000" />
     </task>
     <servers />
   </component>
