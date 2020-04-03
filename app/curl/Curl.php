@@ -4,10 +4,17 @@ namespace App\Curl;
 
 Class Curl
 {
-    public function getWebContent($uri)
+    public $uri;
+
+    public function __construct($uri)
+    {
+        $this->uri = $uri;
+    }
+
+    public function getWebContent()
     {
         // Initialize CURL
-        $curl = curl_init($uri);
+        $curl = curl_init($this->uri);
         // Set return
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
