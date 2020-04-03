@@ -2,10 +2,26 @@
 
 namespace App\Models;
 
-use Config;
-
-class Data extends Config
+class Data
 {
+    public $host = "localhost";
+    public $user = "root";
+    public $password = "root";
+    public $database = "crawler";
+
+    public $connection;
+
+    function __construct()
+    {
+        $this->connection = $this->connectDatabase();
+    }
+
+    public function connectDatabase()
+    {
+        $connection = mysqli_connect($this->host, $this->user, $this->password, $this->database);
+        return $connection;
+    }
+
     public function getAllData()
     {
         $sqlSelect = "SELECT * FROM data_collected";
