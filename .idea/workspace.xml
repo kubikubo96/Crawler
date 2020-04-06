@@ -38,13 +38,13 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Crawler/app" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Crawler/app/config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Crawler/app" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.StoreDataController.php">
@@ -83,7 +83,7 @@
       <workItem from="1585706071003" duration="26633000" />
       <workItem from="1585745141473" duration="32759000" />
       <workItem from="1586169387255" duration="2434000" />
-      <workItem from="1586191828447" duration="6150000" />
+      <workItem from="1586191828447" duration="7775000" />
     </task>
     <servers />
   </component>

@@ -19,42 +19,23 @@ class StoreDataController
             $model = new Model();
             if ($domain == "https://vnexpress.net/") {
                 $crawler = new VnexpressCrawler($uri);
-                $title = $crawler->getTitle()[0];
-                $article = $crawler->getArticle()[0];
-                $datetime = $crawler->getDate()[0];
-                try {
-                    $this->checkNull($title, $article, $datetime);
-                    $status = $model->store($title, $article, $datetime);
-                    $this->checkStatus($status);
-                } catch (Exception $e) {
-                    echo $e->getMessage();
-                }
             } elseif ($domain == "https://dantri.com.vn/") {
                 $crawler = new DantriCrawler($uri);
-                $title = $crawler->getTitle()[0];
-                $article = $crawler->getArticle()[0];
-                $datetime = $crawler->getDate()[0];
-                try {
-                    $this->checkNull($title, $article, $datetime);
-                    $status = $model->store($title, $article, $datetime);
-                    $this->checkStatus($status);
-                } catch (Exception $e) {
-                    echo $e->getMessage();
-                }
             } elseif ($domain == "https://vietnamnet.vn/") {
                 $crawler = new VietnamnetCrawler($uri);
-                $title = $crawler->getTitle()[0];
-                $article = $crawler->getArticle()[0];
-                $datetime = $crawler->getDate()[0];
-                try {
-                    $this->checkNull($title, $article, $datetime);
-                    $status = $model->store($title, $article, $datetime);
-                    $this->checkStatus($status);
-                } catch (Exception $e) {
-                    echo $e->getMessage();
-                }
             } else {
                 echo "<h4>Retrieve only data from article details of dantri, vnexpress, vietnamnet<br>URL cannot be empty</h4>";
+                include_once "app/views/index.php";
+            }
+            $title = $crawler->getTitle()[0];
+            $article = $crawler->getArticle()[0];
+            $datetime = $crawler->getDate()[0];
+            try {
+                $this->checkNull($title, $article, $datetime);
+                $status = $model->store($title, $article, $datetime);
+                $this->checkStatus($status);
+            } catch (Exception $e) {
+                echo $e->getMessage();
             }
         }
         include_once "app/views/index.php";
