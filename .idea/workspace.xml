@@ -83,7 +83,7 @@
       <workItem from="1585706071003" duration="26633000" />
       <workItem from="1585745141473" duration="32759000" />
       <workItem from="1586169387255" duration="2434000" />
-      <workItem from="1586191828447" duration="3408000" />
+      <workItem from="1586191828447" duration="6150000" />
     </task>
     <servers />
   </component>
@@ -204,15 +204,5 @@
     </state>
     <state x="623" y="237" width="670" height="58" key="search.everywhere.popup/0.27.3840.1053@0.27.3840.1053" timestamp="1585713777876" />
     <state x="346" y="237" width="672" height="160" key="search.everywhere.popup/41.27.1879.1053@41.27.1879.1053" timestamp="1585745756170" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/models/Model.php</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

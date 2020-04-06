@@ -6,6 +6,7 @@ use App\Models\Model;
 use App\Crawler\VnexpressCrawler;
 use App\Crawler\VietnamnetCrawler;
 use App\Crawler\DantriCrawler;
+use Exception;
 
 
 class StoreDataController
@@ -21,26 +22,37 @@ class StoreDataController
                 $title = $crawler->getTitle()[0];
                 $article = $crawler->getArticle()[0];
                 $datetime = $crawler->getDate()[0];
-                if ($this->checkNull($title, $article, $datetime)) {
+                try {
+                    $this->checkNull($title, $article, $datetime);
                     $status = $model->store($title, $article, $datetime);
                     $this->checkStatus($status);
+                } catch (Exception $e) {
+                    echo $e->getMessage();
                 }
             } elseif ($domain == "https://dantri.com.vn/") {
                 $crawler = new DantriCrawler($uri);
                 $title = $crawler->getTitle()[0];
                 $article = $crawler->getArticle()[0];
                 $datetime = $crawler->getDate()[0];
-//                $this->checkNull($title, $article, $datetime);
-                $status = $model->store($title, $article, $datetime);
-                $this->checkStatus($status);
+                try {
+                    $this->checkNull($title, $article, $datetime);
+                    $status = $model->store($title, $article, $datetime);
+                    $this->checkStatus($status);
+                } catch (Exception $e) {
+                    echo $e->getMessage();
+                }
             } elseif ($domain == "https://vietnamnet.vn/") {
                 $crawler = new VietnamnetCrawler($uri);
                 $title = $crawler->getTitle()[0];
                 $article = $crawler->getArticle()[0];
                 $datetime = $crawler->getDate()[0];
-//                $this->checkNull($title, $article, $datetime);
-                $status = $model->store($title, $article, $datetime);
-                $this->checkStatus($status);
+                try {
+                    $this->checkNull($title, $article, $datetime);
+                    $status = $model->store($title, $article, $datetime);
+                    $this->checkStatus($status);
+                } catch (Exception $e) {
+                    echo $e->getMessage();
+                }
             } else {
                 echo "<h4>Retrieve only data from article details of dantri, vnexpress, vietnamnet<br>URL cannot be empty</h4>";
             }
@@ -60,9 +72,9 @@ class StoreDataController
     public function checkNull($title, $article, $datetime)
     {
         if ($title == NULL && $article == NULL && $datetime == NULL) {
-            echo "<h4>The URL is not valid!</h4>";
-            return false;
+            throw new Exception("<h4>The URL is not valid!</h4>");
         }
         return true;
     }
+
 }
