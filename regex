@@ -1,0 +1,37 @@
+câu 1) Tìm các chuỗi là dạng số : => \b\d+\b
+bước một:\d tìm một chữ số (\d\d : tìm hai chữ số)
+bước hai: \d+ tìm một chuỗi có một hoặc nhiều \d nối tiếp nhau
+bước ba : viết \b trước và sau \d+ nghĩa là bắt đầu chuỗi và kết thúc chuổi đều là \d. không có ký tự khác ngoài con số
+
+câu 2) Tìm ngày tháng : => \b\d{1,2}\/\d{1,2}\/(\d{4}|\d{2})\b
+
+bước một: ta cần tìm chuỗi có 1 đến 2 con số liền nhau \d{1,2}
+bước hai : theo sau đó là một dấu "/". vì đây là dấu đặc biệt, ta phải dùng dấu "\" đằng trước để regex bỏ qua không coi đó là cú pháp.
+bước ba: tiếp theo là năm, ta sẽ dùng "|" để định năm là 2 số hoặc 4 số. ta phải đóng ngoặc tròn lại để regex hiểu là 2  hoặc 4 số
+bước bốn : thêm \b vào đầu để regex hiểu là đằng trước 1 hoặc hai chữ số không có chữ gì khác.
+bước năm : để cho chắc, ta thêm \b vào cuối để chắc chắn rằng sau năm không có chữ hoặc số
+
+câu 3)  Tìm ngày tháng chính xác : => \b(0?[1-9]|[12]\d|3[01])[\/\-.](0?[1-9]|[12]\d|3[01])[\/\-.](\d{2}|\d{4})\b
+
+bước 1 :[0-9] ta viết thế này sẽ được 1 số từ 0->9
+bước 2 : [0-9]+ ta viết thế này sẽ được 1 số từ 2 chữ số trở lên.
+bước 3 : có dấu "/" đằng sau. [1-9]+\/
+bước 4 : ta biết tháng có thể có 3 trường hợp.
+	th1 : có hoặc không có số 0, và tiếp theo là 1 chữ số từ 1-9)ngày           hoặc tháng) 0?[1-9]+\/
+bước 5 : ta sửa chỗ dấu "/" để ngoài dấu "/" ta lấy thêm cả dấu "." hoặc "-"
+
+câu 4) cắt các text trong chuỗi html : <label .*?>(.*?)<\/label>
+       <label class="s-nav right" for="s-22">simply</label>
+       <label class="s-nav left" for="s-21">dummy</label>
+
+       bước 1 : chuỗi bắt đầu bằng <label
+       bước 2 : muốn lấ tất cả các chữ liền nhau gồm cả dấu cách ta dùng ".*?"
+       bước 3 : kết thúc chuỗi là </label>
+       bước 4 : giờ cần lấy text nằm giữa hai thẻ. tà dùng () và lấy bất kỳ chuỗi gì bằng ".*?"
+
+    câu 5) Bắt 1 chuỗi bất kỳ nằm ở nhiều dòng : <h1>[\s\S]*<\/h2>
+    - \s sẽ lấy được ký tự dấu cách
+    - \S sẽ lấy được ký tự bất kỳ ngoại trừ dấu cách (và \S sẽ bắt được dấu xuống dòng \n)
+    - Nếu kết hợp 2 ký tự đó nhét vào một khung vuông [\s\S] tức là sẽ lấy được 1 trong 2 trường hợp.
+    - Sẽ bắt được toàn bộ các ký tự bất kỳ bao gồm cả dấu cách nếu gặp. Viết [\s\S]*?
+
