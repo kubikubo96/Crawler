@@ -1,5 +1,6 @@
 .content-article-crawler {
     height: 300px;
+    overflow-x:auto;
 }
 
 #table-crawler{
