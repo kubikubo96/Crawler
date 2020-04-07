@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Abstract_factory;
+namespace App\Crawler;
 
 interface CrawlerInterface
 {
