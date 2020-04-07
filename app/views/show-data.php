@@ -17,7 +17,8 @@
             <tbody>
             <?php
             if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
+                $rows = $result->fetch_all(MYSQLI_ASSOC);
+                foreach ($rows as $row) {
                     ?>
                     <tr>
                         <th scope="row"><?= $row['id'] ?></th>
