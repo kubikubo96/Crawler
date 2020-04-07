@@ -1,5 +1,6 @@
 <?php
 
+include_once "app/config/config.php";
 include_once "app/Route.php";
 include_once "app/controllers/StoreDataController.php";
 include_once "app/controllers/ShowDataController.php";
