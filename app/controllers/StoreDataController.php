@@ -3,11 +3,10 @@
 namespace App\Controllers;
 
 use App\Models\Model;
-use App\Crawler\VnexpressCrawler;
-use App\Crawler\DantriCrawler;
-use App\Crawler\VietnamnetCrawler;
+use App\Abstract_factory\VnexpressFactory;
+use App\Abstract_factory\DantriFactory;
+use App\Abstract_factory\VietnamnetFactory;
 use Exception;
-
 
 class StoreDataController
 {
@@ -18,20 +17,20 @@ class StoreDataController
             $domain = substr($uri, 0, 22);
             $model = new Model();
             if ($domain == "https://vnexpress.net/") {
-                $crawlerVnexpress = new VnexpressCrawler($uri);
-                $title = $crawlerVnexpress->getTitle()[0];
-                $article = $crawlerVnexpress->getArticle()[0];
-                $datetime = $crawlerVnexpress->getDate()[0];
+                $crawlerVnexpress = new VnexpressFactory($uri);
+                $title = $crawlerVnexpress->makeGetData()->getTitle()[0];
+                $article = $crawlerVnexpress->makeGetData()->getArticle()[0];
+                $datetime = $crawlerVnexpress->makeGetData()->getDate()[0];
             } elseif ($domain == "https://dantri.com.vn/") {
-                $crawlerDantri = new DantriCrawler($uri);
-                $title = $crawlerDantri->getTitle()[0];
-                $article = $crawlerDantri->getArticle()[0];
-                $datetime = $crawlerDantri->getDate()[0];
+                $crawlerDantri = new DantriFactory($uri);
+                $title = $crawlerDantri->makeGetData()->getTitle()[0];
+                $article = $crawlerDantri->makeGetData()->getArticle()[0];
+                $datetime = $crawlerDantri->makeGetData()->getDate()[0];
             } elseif ($domain == "https://vietnamnet.vn/") {
-                $crawlerVietnamnet = new VietnamnetCrawler($uri);
-                $title = $crawlerVietnamnet->getTitle()[0];
-                $article = $crawlerVietnamnet->getArticle()[0];
-                $datetime = $crawlerVietnamnet->getDate()[0];
+                $crawlerVietnamnet = new VietnamnetFactory($uri);
+                $title = $crawlerVietnamnet->makeGetData()->getTitle()[0];
+                $article = $crawlerVietnamnet->makeGetData()->getArticle()[0];
+                $datetime = $crawlerVietnamnet->makeGetData()->getDate()[0];
             } else {
                 echo "<h4>Retrieve only data from article details of dantri, vnexpress, vietnamnet<br>URL cannot be empty</h4>";
                 include_once "app/views/index.php";
