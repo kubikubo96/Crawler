@@ -11,6 +11,10 @@ include_once "app/crawler/Crawler.php";
 include_once "app/crawler/DantriCrawler.php";
 include_once "app/crawler/VietnamnetCrawler.php";
 include_once "app/crawler/VnexpressCrawler.php";
+include_once "app/abstract_factory/FactoryInterface.php";
+include_once "app/abstract_factory/VnexpressFactory.php";
+include_once "app/abstract_factory/DantriFactory.php";
+include_once "app/abstract_factory/VietnamnetFactory.php";
 
 if (isset($_GET["controller"])) {
     $controller = $_GET["controller"];
