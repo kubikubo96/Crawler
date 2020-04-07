@@ -4,8 +4,8 @@ namespace App\Controllers;
 
 use App\Models\Model;
 use App\Crawler\VnexpressCrawler;
-use App\Crawler\VietnamnetCrawler;
 use App\Crawler\DantriCrawler;
+use App\Crawler\VietnamnetCrawler;
 use Exception;
 
 
@@ -18,22 +18,33 @@ class StoreDataController
             $domain = substr($uri, 0, 22);
             $model = new Model();
             if ($domain == "https://vnexpress.net/") {
-                $crawler = new VnexpressCrawler($uri);
+                $crawlerVnexpress = new VnexpressCrawler($uri);
+                $title = $crawlerVnexpress->getTitle();
+                $article = $crawlerVnexpress->getArticle();
+                $datetime = $crawlerVnexpress->getDate();
             } elseif ($domain == "https://dantri.com.vn/") {
-                $crawler = new DantriCrawler($uri);
+                $crawlerDantri = new DantriCrawler($uri);
+                $title = $crawlerDantri->getTitle()[0];
+                $article = $crawlerDantri->getArticle()[0];
+                $datetime = $crawlerDantri->getDate()[0];
             } elseif ($domain == "https://vietnamnet.vn/") {
-                $crawler = new VietnamnetCrawler($uri);
+                $crawlerVietnamnet = new VietnamnetCrawler($uri);
+                $title = $crawlerVietnamnet->getTitle()[0];
+                $article = $crawlerVietnamnet->getArticle()[0];
+                $datetime = $crawlerVietnamnet->getDate()[0];
             } else {
                 echo "<h4>Retrieve only data from article details of dantri, vnexpress, vietnamnet<br>URL cannot be empty</h4>";
                 include_once "app/views/index.php";
+                return false;
             }
-            $title = $crawler->getTitle()[0];
-            $article = $crawler->getArticle()[0];
-            $datetime = $crawler->getDate()[0];
             try {
                 $this->checkNull($title, $article, $datetime);
                 $status = $model->store($title, $article, $datetime);
-                $this->checkStatus($status);
+                try {
+                    $this->checkStatus($status);
+                } catch (Exception $e) {
+                    echo $e->getMessage();
+                }
             } catch (Exception $e) {
                 echo $e->getMessage();
             }
@@ -43,11 +54,11 @@ class StoreDataController
 
     public function checkStatus($status)
     {
-        if ($status) {
-            echo "<h4>Data crawled successfully!</h4>";
-        } else {
-            echo "<h4>Data saving failed!</h4>";
+        if (!$status) {
+            throw new Exception("<h4>Data saving failed!</h4>");
         }
+        echo "<h4>Data crawled successfully!</h4>";
+        return true;
     }
 
     public function checkNull($title, $article, $datetime)
