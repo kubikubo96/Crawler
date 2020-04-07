@@ -2,8 +2,6 @@
 
 namespace App\Crawler;
 
-use App\Abstract_factory\CrawlerInterface;
-
 class VnexpressCrawler extends Crawler implements CrawlerInterface
 {
     public $regexTitle = '/<h1 class="title.*?">(.*?)<\/h1>/m';
