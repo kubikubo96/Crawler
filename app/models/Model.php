@@ -13,6 +13,7 @@ class Model
 
     public function store($title, $article, $datetime)
     {
+        global $connection;
         if (empty($title) || empty($article) || empty($datetime)) {
             return false;
         }
@@ -21,7 +22,7 @@ class Model
         $datetime = addslashes($datetime);
         $sqlInsert = "INSERT INTO data_collected (title, article, datetime) VALUES ('$title','$article','$datetime')";
 
-        if (mysqli_query($this->connection, $sqlInsert)) {
+        if($connection->query($sqlInsert)){
             return true;
         }
         return false;
