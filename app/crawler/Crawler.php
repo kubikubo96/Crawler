@@ -4,7 +4,7 @@ namespace App\Crawler;
 
 use App\Curl\Curl;
 
-class Crawler
+class Crawler implements CrawlerInterface
 {
     public $uri;
     public $regexTitle;
