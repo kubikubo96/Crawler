@@ -4,15 +4,38 @@ namespace App\Crawler;
 
 use App\Curl\Curl;
 
-class Crawler extends Curl implements CrawlerInterface
+class Crawler
 {
-    public $regex;
+    public $uri;
+    public $regexTitle;
+    public $regexArticle;
+    public $regexDate;
 
-    public function getSpecificData($regex)
+    public function __construct($uri)
     {
-        $this->regex = $regex;
+        $this->uri = $uri;
+    }
 
-        preg_match_all($this->regex, $this->getWebContent(), $matches);
+    public function getTitle()
+    {
+        return $this->getSpecificData($this->regexTitle, $this->uri);
+    }
+
+    public function getArticle()
+    {
+        return $this->getSpecificData($this->regexArticle, $this->uri);
+    }
+
+    public function getDate()
+    {
+        return $this->getSpecificData($this->regexDate, $this->uri);
+    }
+
+    public function getSpecificData($regex, $uri)
+    {
+        $curl = new Curl($uri);
+
+        preg_match_all($regex, $curl->getWebContent(), $matches);
         return !empty($matches[1]) ? $matches[1] : FALSE;
     }
 }
