@@ -4,31 +4,11 @@ namespace App\Models;
 
 class Model
 {
-    public $host = "localhost";
-    public $user = "root";
-    public $password = "root";
-    public $database = "crawler";
-
-    public $connection;
-
-    function __construct()
-    {
-        $this->connection = $this->connectDatabase();
-    }
-
-    public function connectDatabase()
-    {
-        $connection = mysqli_connect($this->host, $this->user, $this->password, $this->database);
-        return $connection;
-    }
-
     public function getAllData()
     {
+        global $connection;
         $sqlSelect = "SELECT * FROM data_collected";
-
-        $result = mysqli_query($this->connection, $sqlSelect);
-
-        return $result;
+        return $connection->query($sqlSelect);
     }
 
     public function store($title, $article, $datetime)
