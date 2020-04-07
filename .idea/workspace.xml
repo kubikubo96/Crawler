@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9508aa8f-6826-46a7-b39f-12fa99ff348e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/crawler/Crawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/Crawler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/crawler/CrawlerInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/CrawlerInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/crawler/DantriCrawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/DantriCrawler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/crawler/VietnamnetCrawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/VietnamnetCrawler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/crawler/VnexpressCrawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/VnexpressCrawler.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +43,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/crawler" />
+      <recent name="$PROJECT_DIR$/app/crawler/Vnexpress" />
+      <recent name="$PROJECT_DIR$/app/crawler/Vietnamnet" />
+      <recent name="$PROJECT_DIR$/app/crawler/Dantri" />
       <recent name="$PROJECT_DIR$/app/config" />
-      <recent name="$PROJECT_DIR$/Crawler/app" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -85,7 +91,7 @@
       <workItem from="1585745141473" duration="32759000" />
       <workItem from="1586169387255" duration="2434000" />
       <workItem from="1586191828447" duration="8467000" />
-      <workItem from="1586229616627" duration="4926000" />
+      <workItem from="1586229616627" duration="14744000" />
     </task>
     <servers />
   </component>
@@ -167,14 +173,14 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="344" key="GridCell.Tab.2.right/0.27.1920.1053@0.27.1920.1053" timestamp="1585643191763" />
-    <state x="1335" y="469" width="249" height="163" key="NewPhpFileDialog" timestamp="1586230687588">
+    <state x="1335" y="469" width="249" height="191" key="NewPhpFileDialog" timestamp="1586236932834">
       <screen x="42" y="27" width="1878" height="1053" />
     </state>
     <state x="755" y="478" width="399" height="149" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1585712555663" />
     <state x="1122" y="478" key="NewPhpFileDialog/0.27.3840.1053@0.27.3840.1053" timestamp="1585725509053" />
     <state x="743" y="469" width="249" height="149" key="NewPhpFileDialog/41.27.1879.1053@41.27.1879.1053" timestamp="1585748690671" />
     <state x="2657" y="469" width="399" height="149" key="NewPhpFileDialog/41.27.3799.1053@41.27.3799.1053" timestamp="1585900148355" />
-    <state x="1335" y="469" width="249" height="163" key="NewPhpFileDialog/42.27.1878.1053/1920.0.1440.900@42.27.1878.1053" timestamp="1586230687588" />
+    <state x="1335" y="469" width="249" height="191" key="NewPhpFileDialog/42.27.1878.1053/1920.0.1440.900@42.27.1878.1053" timestamp="1586236932834" />
     <state x="449" y="187" key="SettingsEditor" timestamp="1585625928983">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
