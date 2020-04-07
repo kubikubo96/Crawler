@@ -19,9 +19,9 @@ class StoreDataController
             $model = new Model();
             if ($domain == "https://vnexpress.net/") {
                 $crawlerVnexpress = new VnexpressCrawler($uri);
-                $title = $crawlerVnexpress->getTitle();
-                $article = $crawlerVnexpress->getArticle();
-                $datetime = $crawlerVnexpress->getDate();
+                $title = $crawlerVnexpress->getTitle()[0];
+                $article = $crawlerVnexpress->getArticle()[0];
+                $datetime = $crawlerVnexpress->getDate()[0];
             } elseif ($domain == "https://dantri.com.vn/") {
                 $crawlerDantri = new DantriCrawler($uri);
                 $title = $crawlerDantri->getTitle()[0];
