@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Crawler;
-
+//b2 : implements interface
 class DantriCrawler extends Crawler implements CrawlerInterface
 {
     public $regexTitle = '/<h1 class=\"fon31 mgb15\">(.*?)<\/h1>/ms';

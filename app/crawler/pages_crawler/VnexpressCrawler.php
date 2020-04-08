@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Crawler;
-
+//b2 : implements interface
 class VnexpressCrawler extends Crawler implements CrawlerInterface
 {
     public $regexTitle = '/<h1 class="title.*?">(.*?)<\/h1>/m';
