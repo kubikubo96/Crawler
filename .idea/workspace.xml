@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9508aa8f-6826-46a7-b39f-12fa99ff348e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/abstract_factory/DantriFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/abstract_factory/FactoryInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/abstract_factory/VietnamnetFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/abstract_factory/VnexpressFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/StoreDataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/StoreDataController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/crawler/CrawlerInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/CrawlerInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/crawler/DantriCrawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/pages_crawler/DantriCrawler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/crawler/VietnamnetCrawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/pages_crawler/VietnamnetCrawler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/crawler/VnexpressCrawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/pages_crawler/VnexpressCrawler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="9508aa8f-6826-46a7-b39f-12fa99ff348e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +87,7 @@
       <workItem from="1586229616627" duration="18437000" />
       <workItem from="1586253287256" duration="1238000" />
       <workItem from="1586287856925" duration="6775000" />
-      <workItem from="1586317356110" duration="8954000" />
+      <workItem from="1586317356110" duration="9284000" />
     </task>
     <servers />
   </component>

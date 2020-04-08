@@ -7,7 +7,7 @@ use App\Crawler\DantriCrawler;
 use App\Crawler\VietnamnetCrawler;
 
 //b4 Concrete Factory
-class CrawlerFactory extends AbstractFactory
+class CrawlerFactory extends AbstractFactoryCrawler
 {
     public $uri = null;
 
