@@ -3,11 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="9508aa8f-6826-46a7-b39f-12fa99ff348e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/abstract_factory/CrawlerInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/CrawlerInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/abstract_factory/DantriFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/abstract_factory/FactoryInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/abstract_factory/VietnamnetFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/abstract_factory/VnexpressFactory.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/StoreDataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/StoreDataController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/crawler/DantriCrawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/DantriCrawler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/crawler/VietnamnetCrawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/VietnamnetCrawler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/crawler/VnexpressCrawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/VnexpressCrawler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/crawler/CrawlerInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/CrawlerInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/crawler/DantriCrawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/pages_crawler/DantriCrawler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/crawler/VietnamnetCrawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/pages_crawler/VietnamnetCrawler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/crawler/VnexpressCrawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/crawler/pages_crawler/VnexpressCrawler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,16 +47,16 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/Crawler/app/config" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/crawler/pages_crawler" />
+      <recent name="$PROJECT_DIR$/app/crawler/CrawlerFactory" />
       <recent name="$PROJECT_DIR$/app/crawler" />
       <recent name="$PROJECT_DIR$/app/abstract_factory" />
       <recent name="$PROJECT_DIR$/app/crawler/Vnexpress" />
-      <recent name="$PROJECT_DIR$/app/crawler/Vietnamnet" />
-      <recent name="$PROJECT_DIR$/app/crawler/Dantri" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Crawler/app/config" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.StoreDataController.php">
@@ -94,7 +98,8 @@
       <workItem from="1586191828447" duration="8467000" />
       <workItem from="1586229616627" duration="18437000" />
       <workItem from="1586253287256" duration="1238000" />
-      <workItem from="1586287856925" duration="4768000" />
+      <workItem from="1586287856925" duration="6775000" />
+      <workItem from="1586317356110" duration="8954000" />
     </task>
     <servers />
   </component>
@@ -114,10 +119,11 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="634" y="234" width="642" height="637" key="#StoreDataController.php/0.27.1920.1053@0.27.1920.1053" timestamp="1585626360577" />
-    <state x="604" y="27" width="692" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585712627734">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="633" y="27" width="692" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586326810992">
+      <screen x="42" y="27" width="1878" height="1053" />
     </state>
     <state x="604" y="27" width="692" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1585712627734" />
+    <state x="633" y="27" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/42.27.1878.1053/1920.0.1440.900@42.27.1878.1053" timestamp="1586326810992" />
     <state x="2613" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585881577619">
       <screen x="41" y="27" width="3799" height="1053" />
     </state>
@@ -176,14 +182,14 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="344" key="GridCell.Tab.2.right/0.27.1920.1053@0.27.1920.1053" timestamp="1585643191763" />
-    <state x="1335" y="469" width="249" height="254" key="NewPhpFileDialog" timestamp="1586291648107">
+    <state x="1335" y="469" width="249" height="268" key="NewPhpFileDialog" timestamp="1586321056239">
       <screen x="42" y="27" width="1878" height="1053" />
     </state>
     <state x="755" y="478" width="399" height="149" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1585712555663" />
     <state x="1122" y="478" key="NewPhpFileDialog/0.27.3840.1053@0.27.3840.1053" timestamp="1585725509053" />
     <state x="743" y="469" width="249" height="149" key="NewPhpFileDialog/41.27.1879.1053@41.27.1879.1053" timestamp="1585748690671" />
     <state x="2657" y="469" width="399" height="149" key="NewPhpFileDialog/41.27.3799.1053@41.27.3799.1053" timestamp="1585900148355" />
-    <state x="1335" y="469" width="249" height="254" key="NewPhpFileDialog/42.27.1878.1053/1920.0.1440.900@42.27.1878.1053" timestamp="1586291648107" />
+    <state x="1335" y="469" width="249" height="268" key="NewPhpFileDialog/42.27.1878.1053/1920.0.1440.900@42.27.1878.1053" timestamp="1586321056239" />
     <state x="449" y="187" key="SettingsEditor" timestamp="1585625928983">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
