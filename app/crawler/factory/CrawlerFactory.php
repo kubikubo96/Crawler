@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Crawler\Crawler_factory;
+namespace App\Crawler\factory;
 
 use App\Crawler\VnexpressCrawler;
 use App\Crawler\DantriCrawler;

@@ -8,11 +8,11 @@ include_once "app/models/Model.php";
 include_once "app/crawler/CrawlerInterface.php"; //CrawlerInterface must be included before Crawler
 include_once "app/curl/Curl.php";
 include_once "app/crawler/Crawler.php";
-include_once "app/crawler/pages_crawler/VietnamnetCrawler.php";
-include_once "app/crawler/pages_crawler/DantriCrawler.php";
-include_once "app/crawler/pages_crawler/VnexpressCrawler.php";
-include_once "app/crawler/crawler_factory/AbstractFactoryCrawler.php";
-include_once "app/crawler/crawler_factory/CrawlerFactory.php";
+include_once "app/crawler/pages/VietnamnetCrawler.php";
+include_once "app/crawler/pages/DantriCrawler.php";
+include_once "app/crawler/pages/VnexpressCrawler.php";
+include_once "app/crawler/factory/AbstractFactoryCrawler.php";
+include_once "app/crawler/factory/CrawlerFactory.php";
 
 if (isset($_GET["controller"])) {
     $controller = $_GET["controller"];

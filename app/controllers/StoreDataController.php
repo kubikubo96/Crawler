@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Model;
-use App\Crawler\Crawler_factory\CrawlerFactory;
+use App\Crawler\factory\CrawlerFactory;
 use Exception;
 
 class StoreDataController

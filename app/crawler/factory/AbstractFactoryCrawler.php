@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Crawler\Crawler_factory;
+namespace App\Crawler\factory;
 
 //b3 Abstract factory
 abstract class AbstractFactoryCrawler
