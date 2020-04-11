@@ -17,10 +17,6 @@ class ComposerStaticIniteb7199409b2bd94f5d7c9923f3b16ceb
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
-        'a' => 
-        array (
-            'app\\crawler\\' => 12,
-        ),
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
@@ -46,10 +42,6 @@ class ComposerStaticIniteb7199409b2bd94f5d7c9923f3b16ceb
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-        ),
-        'app\\crawler\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app/crawler',
         ),
         'Webmozart\\Assert\\' => 
         array (
