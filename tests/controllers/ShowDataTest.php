@@ -7,13 +7,13 @@ class ShowDataTest extends TestCase
 {
     public function testShowDataHasReturned()
     {
-        $showDataController = $this->getMockBuilder(ShowDataController::class)
+        $showData = $this->getMockBuilder(ShowDataController::class)
             ->setMethods(['showData'])
             ->getMock();
 
-        $showDataController->method('showData')->willReturn(true);
+        $showData->method('showData')->willReturn(true);
 
-        $result = $showDataController->showData();
+        $result = $showData->showData();
 
         $this->assertTrue($result);
     }
