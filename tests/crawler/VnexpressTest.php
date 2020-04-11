@@ -1,8 +1,8 @@
 <?php
 
-require __DIR__ . "/../../app/crawler/Crawler.php";
-require __DIR__ . "/../../app/crawler/CrawlerInterface.php";
-require __DIR__ . "/../../app/crawler/pages/VnexpressCrawler.php";
+require_once  __DIR__ . "/../../app/crawler/CrawlerInterface.php";
+require_once __DIR__ . "/../../app/crawler/Crawler.php";
+require_once  __DIR__ . "/../../app/crawler/pages/VnexpressCrawler.php";
 
 use PHPUnit\Framework\TestCase;
 use App\Crawler\VnexpressCrawler;
@@ -10,7 +10,7 @@ use App\Crawler\VnexpressCrawler;
 class VnexpressTest extends TestCase
 {
     protected $vnexpress;
-    protected $uri = "https://vnexpress.net/cong-ty-nhieu-lao-dong-nhat-sai-gon-ngung-hoat-dong-4083173.html";
+    protected $uri = "https://vnexpress.net/hon-102-000-nguoi-chet-vi-ncov-toan-cau-4083004.html";
 
     public function setUp(): void
     {
