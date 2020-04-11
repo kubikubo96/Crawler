@@ -5,7 +5,7 @@ use App\Controllers\ShowDataController;
 
 class ShowDataTest extends TestCase
 {
-    public function testShowDataOfControllerHasReturned()
+    public function testShowDataHasReturned()
     {
         $showDataController = $this->getMockBuilder(ShowDataController::class)
             ->setMethods(['showData'])
