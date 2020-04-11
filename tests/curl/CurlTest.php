@@ -5,7 +5,7 @@ require __DIR__ . "/../../app/curl/Curl.php";
 use PHPUnit\Framework\TestCase;
 use App\Curl\Curl;
 
-class curlTest extends TestCase
+class CurlTest extends TestCase
 {
     public function urlProvider()
     {
