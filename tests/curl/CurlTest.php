@@ -19,7 +19,7 @@ class CurlTest extends TestCase
     /**
      * @dataProvider urlProvider
      */
-    public function testWebContentReturnNotNull($curl)
+    public function testWebContentReturnedNotNull($curl)
     {
         $curl = new Curl($curl);
 
