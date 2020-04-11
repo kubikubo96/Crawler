@@ -1,9 +1,5 @@
 <?php
 
-require_once __DIR__ . "/../../app/crawler/CrawlerInterface.php";
-require_once __DIR__ . "/../../app/crawler/Crawler.php";
-require_once __DIR__ . "/../../app/crawler/pages/VietnamnetCrawler.php";
-
 use PHPUnit\Framework\TestCase;
 use App\Crawler\VietnamnetCrawler;
 
