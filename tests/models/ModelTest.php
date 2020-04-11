@@ -20,14 +20,9 @@ class ModelTest extends TestCase
 
     public function testDataHasStoreInDatabase()
     {
-        $model = $this->getMockBuilder(Model::class)
-            ->setMethods(['store'])
-            ->getMock();
-
-        $model->method('store')->willReturn(true);
-
+        $model = Mockery::mock('Model');
+        $model->shouldReceive('store')->once();
         $result = $model->store('title', 'article', 'date');
-
-        $this->assertTrue($result);
+        $this->assertEquals('', $result);
     }
 }
